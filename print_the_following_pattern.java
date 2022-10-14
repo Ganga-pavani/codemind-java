@@ -5,11 +5,22 @@ class pat
     {
        Scanner sc=new Scanner(System.in);
        int n=sc.nextInt();
-       for(int i=n;i>=1;i--)
+       for(int i=1;i<=n;i++)
        {
-           for(int j=1;j<=i;j++)
+           for(int j=1;j<=n;j++)
            {
-               System.out.print((char)(64+i)+" ");
+               if(j>n-2)
+               {
+                  continue;
+               }
+               else
+               {
+                   System.out.print(j);
+               }
+           }
+           for(int j=n-3;j>=1;j--)
+           {
+               System.out.print(j);
            }
            System.out.println();
        }
